@@ -9,6 +9,7 @@ import static jcuda.runtime.JCuda.cudaGetDeviceProperties;
 public class Demo {
 
     public static void main(String[] args) {
+        // See : https://github.com/jcuda/jcuda-samples/blob/master/JCudaSamples/src/main/java/jcuda/runtime/samples/JCudaPrintDeviceInfo.java
         JCuda.setExceptionsEnabled(true);
         int deviceCount[] = {0};
         cudaGetDeviceCount(deviceCount);

@@ -27,6 +27,8 @@ For older versions, see https://docs.nvidia.com/deploy/cuda-compatibility/#id2
 
 * NVIDIA
 ** https://developer.nvidia.com/cuda-toolkit[CUDA Toolkit]
+** https://docs.nvidia.com/cuda/[CUDA Toolkit Documentation]
+** https://docs.nvidia.com/cuda/wsl-user-guide/index.html[CUDA on WSL User Guide]
 ** https://developer.nvidia.com/blog/tag/cuda/[Blog posts about CUDA]
 *** https://developer.nvidia.com/blog/cuda-toolkit-12-0-released-for-general-availability/[CUDA Toolkit 12.0 Released for General Availability] (dec. 2022)
 *** https://developer.nvidia.com/blog/leveling-up-cuda-performance-on-wsl2-with-new-enhancements/[Leveling up CUDA Performance on WSL2 with New Enhancements] (aug. 2021)

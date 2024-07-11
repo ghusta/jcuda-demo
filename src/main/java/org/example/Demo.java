@@ -2,16 +2,20 @@ package org.example;
 
 import jcuda.runtime.JCuda;
 import jcuda.runtime.cudaDeviceProp;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static jcuda.runtime.JCuda.cudaGetDeviceCount;
 import static jcuda.runtime.JCuda.cudaGetDeviceProperties;
 
 public class Demo {
 
+    private static final Logger log = LoggerFactory.getLogger(Demo.class);
+
     public static void main(String[] args) {
         // See : https://github.com/jcuda/jcuda-samples/blob/master/JCudaSamples/src/main/java/jcuda/runtime/samples/JCudaPrintDeviceInfo.java
         JCuda.setExceptionsEnabled(true);
-        int deviceCount[] = {0};
+        int[] deviceCount = {0};
         cudaGetDeviceCount(deviceCount);
         System.out.println("Found " + deviceCount[0] + " devices");
         for (int device = 0; device < deviceCount[0]; device++) {

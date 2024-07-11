@@ -28,7 +28,66 @@ public class Demo {
             System.out.printf("GPU Compute Capability : %d.%d %n", deviceProperties.major, deviceProperties.minor);
             System.out.println("Device name : " + deviceProperties.getName());
             System.out.println("Total global memory = " + Math.round(deviceProperties.totalGlobalMem / (1024 * 1024 * 1024.0)) + " GB");
+            System.out.println("Number of multiprocessors on device = " + deviceProperties.multiProcessorCount);
+            System.out.println("Nb cores = " + getSPcores(deviceProperties));
         }
+    }
+
+    /**
+     * Inspired from https://stackoverflow.com/questions/32530604/how-can-i-get-number-of-cores-in-cuda-device
+     */
+    public static int getSPcores(cudaDeviceProp devProp) {
+        int cores = 0;
+        int mp = devProp.multiProcessorCount;
+        switch (devProp.major) {
+            case 2 -> {
+                if (devProp.minor == 1) {
+                    cores = mp * 48;
+                } else {
+                    cores = mp * 32;
+                } // Fermi
+            }
+            case 3 -> // Kepler
+                    cores = mp * 192;
+            case 5 -> // Maxwell
+                    cores = mp * 128;
+            case 6 -> {
+                if ((devProp.minor == 1) || (devProp.minor == 2)) {
+                    cores = mp * 128;
+                } else if (devProp.minor == 0) {
+                    cores = mp * 64;
+                } else {
+                    System.out.println("Unknown device type");
+                } // Pascal
+            }
+            case 7 -> {
+                if ((devProp.minor == 0) || (devProp.minor == 5)) {
+                    cores = mp * 64;
+                } else {
+                    System.out.println("Unknown device type");
+                } // Volta and Turing
+            }
+            case 8 -> {
+                if (devProp.minor == 0) {
+                    cores = mp * 64;
+                } else if (devProp.minor == 6) {
+                    cores = mp * 128;
+                } else if (devProp.minor == 9) {
+                    cores = mp * 128; // ada lovelace
+                } else {
+                    System.out.println("Unknown device type");
+                } // Ampere
+            }
+            case 9 -> {
+                if (devProp.minor == 0) {
+                    cores = mp * 128;
+                } else {
+                    System.out.println("Unknown device type");
+                } // Hopper
+            }
+            default -> System.out.println("Unknown device type");
+        }
+        return cores;
     }
 
 }

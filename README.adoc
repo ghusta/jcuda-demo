@@ -19,6 +19,17 @@ For example :
 | CUDA 11.x | >= 450.80.02 | >=452.39
 |===
 
-Source : https://docs.nvidia.com/deploy/cuda-compatibility/#cuda-11-and-later-defaults-to-minor-version-compatibility :
+.Source : https://docs.nvidia.com/deploy/cuda-compatibility/#cuda-11-and-later-defaults-to-minor-version-compatibility
 
 For older versions, see https://docs.nvidia.com/deploy/cuda-compatibility/#id2
+
+== References
+
+* NVIDIA
+** https://developer.nvidia.com/cuda-toolkit[CUDA Toolkit]
+** https://developer.nvidia.com/blog/tag/cuda/[Blog posts about CUDA]
+*** https://developer.nvidia.com/blog/cuda-toolkit-12-0-released-for-general-availability/[CUDA Toolkit 12.0 Released for General Availability] (dec. 2022)
+*** https://developer.nvidia.com/blog/leveling-up-cuda-performance-on-wsl2-with-new-enhancements/[Leveling up CUDA Performance on WSL2 with New Enhancements] (aug. 2021)
+*** https://developer.nvidia.com/blog/announcing-cuda-on-windows-subsystem-for-linux-2/[Announcing CUDA on Windows Subsystem for Linux 2] (jun. 2020)
+*** https://developer.nvidia.com/blog/cuda-11-toolkit/[NVIDIA Announces CUDA Toolkit 11] (may 2020)
+*** https://developer.nvidia.com/blog/cuda-11-features-revealed/[CUDA 11 Features Revealed] (may 2020)

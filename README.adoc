@@ -1,0 +1,24 @@
+= Demo JCUDA (Java adapter for NVIDIA's CUDA)
+:toc:
+
+== Overview
+
+Demo for displaying GPU capabilities with a NVIDIA device (graphic card).
+
+=== Prerequisites
+
+CUDA version must be compatible with NVIDIA's driver installed on machine.
+
+For example :
+
+|===
+| CUDA Toolkit | Linux x86_64 Minimum Required Driver Version | Windows Minimum Required Driver Version
+
+| CUDA 12.x | >=525.60.13 | >=527.41
+
+| CUDA 11.x | >= 450.80.02 | >=452.39
+|===
+
+Source : https://docs.nvidia.com/deploy/cuda-compatibility/#cuda-11-and-later-defaults-to-minor-version-compatibility :
+
+For older versions, see https://docs.nvidia.com/deploy/cuda-compatibility/#id2

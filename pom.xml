@@ -18,7 +18,7 @@
         <dependency>
             <groupId>org.jcuda</groupId>
             <artifactId>jcuda</artifactId>
-            <version>12.0.0</version>
+            <version>11.8.0</version>
         </dependency>
     </dependencies>
 

@@ -27,6 +27,7 @@ For older versions, see https://docs.nvidia.com/deploy/cuda-compatibility/#id2
 
 * NVIDIA
 ** https://developer.nvidia.com/cuda-toolkit[CUDA Toolkit]
+** https://developer.nvidia.com/cuda-gpus[CUDA : Your GPU Compute Capability]
 ** https://docs.nvidia.com/cuda/[CUDA Toolkit Documentation]
 ** https://docs.nvidia.com/cuda/wsl-user-guide/index.html[CUDA on WSL User Guide]
 ** https://developer.nvidia.com/blog/tag/cuda/[Blog posts about CUDA]
